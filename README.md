@@ -1,5 +1,5 @@
 # fizzyblue
-![screenshot.png](A screenshot of a booted fizzyblue system)
+![A screenshot of a booted fizzyblue system](screenshot.png)
 fizzyblue is a custom bootc image based on Fedora Silverblue, with a minimal, opinionated choice of included changes. It is tailored towards gaming, software development and day to day use. fizzyblue is a custom image for my own devices, but if the changes sound useful to you, you're welcome to try it.
 
 ## Features
