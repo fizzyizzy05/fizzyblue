@@ -17,5 +17,5 @@ fizzyblue is a custom bootc image based on Fedora Silverblue, with a minimal, op
 ## How to use
 Run this command on an installed bootc system to use fizzyblue. 
 ```bash
-sudo bootc switch ghcr.io/fizzyizzy05/fizzyblue
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue
 ```
