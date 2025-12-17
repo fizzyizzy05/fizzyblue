@@ -10,5 +10,4 @@ dnf in -y \
 # Install tools
 dnf in -y \
     mangohud \
-    protontricks \
     gamescope
