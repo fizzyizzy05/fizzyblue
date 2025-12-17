@@ -7,3 +7,6 @@ set -ouex pipefail
 
 # Install the gaming packages
 /ctx/build_files/base/01-gaming.sh
+
+# Install the dev software packages.
+/ctx/build_files/base/02-dx.sh
