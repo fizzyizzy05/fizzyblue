@@ -1,0 +1,39 @@
+name: Build container image
+on:
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '05 10 * * *'  # 13:10 pm UTC every Tuesday - a few hours after that day's main build
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/README.md'
+  workflow_dispatch:
+
+jobs:
+  build_iso:
+    name: Build and push image
+    runs-on: ubuntu-24.04
+
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    steps: 
+      - name: Build ISO
+        id: build
+        uses: ublue-os/titanoboa@main
+        with:
+          image-ref: ghcr.io/fizzyizzy05/fizzyblue
+          flatpaks-list: ${{ github.workspace }}/flatpaks/system-flatpaks.list
+          kargs: ""
+          builder-distro: fedora
+
+      - name: Rename and Checksum ISO
+        run: |
+          mkdir -p output
+          mv ${{ steps.build.outputs.iso-dest }} output/fizzyblue.iso
+          (cd output && sha256sum my-custom-image.iso | tee fizzyblue.iso-CHECKSUM)
