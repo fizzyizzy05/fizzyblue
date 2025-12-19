@@ -19,6 +19,10 @@ jobs:
       id-token: write
 
     steps: 
+      - name: Checkout the repository
+        id: checkout
+        uses: actions/checkout@v4
+      
       - name: Build ISO
         id: build
         uses: ublue-os/titanoboa@main
