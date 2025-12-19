@@ -27,7 +27,7 @@ jobs:
         id: build
         uses: ublue-os/titanoboa@main
         with:
-          image-ref: ghcr.io/fizzyizzy05/fizzyblue
+          image-ref: ghcr.io/fizzyizzy05/fizzyblue:latest
           flatpaks-list: ${{ github.workspace }}/flatpaks/system-flatpaks.list
           kargs: ""
           builder-distro: fedora
