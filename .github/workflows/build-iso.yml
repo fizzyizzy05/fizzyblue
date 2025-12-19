@@ -6,12 +6,11 @@ on:
       - main
   schedule:
     - cron: '05 10 * * *' # 10:05am UTC everyday  
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**/README.md'
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
   build_iso:
