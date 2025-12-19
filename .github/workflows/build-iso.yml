@@ -4,7 +4,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '05 10 * * *'  # 13:10 pm UTC every Tuesday - a few hours after that day's main build
+    - cron: '05 10 * * *' # 10:05am UTC everyday  
   push:
     branches:
       - main
