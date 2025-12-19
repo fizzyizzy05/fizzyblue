@@ -32,6 +32,7 @@ jobs:
         with:
           image-ref: ghcr.io/fizzyizzy05/fizzyblue:latest
           flatpaks-list: ${{ github.workspace }}/flatpaks/system-flatpaks.list
+          hook-post-rootfs: ${{ github.workspace }}/iso_files/iso_config.sh
           kargs: ""
           builder-distro: fedora
           iso-dest: fizzyblue.iso
