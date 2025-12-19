@@ -8,13 +8,9 @@ on:
     - cron: '05 10 * * *' # 10:05am UTC everyday  
   workflow_dispatch:
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
-  cancel-in-progress: true
-
 jobs:
-  build_iso:
-    name: Build and push image
+  build:
+    name: Build and push ISO file
     runs-on: ubuntu-24.04
 
     permissions:
