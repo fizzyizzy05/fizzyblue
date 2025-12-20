@@ -6,6 +6,9 @@ on:
       - main
   schedule:
     - cron: '05 10 * * *' # 10:05am UTC everyday  
+  push:
+    paths:
+      - 'iso_files/**'
   workflow_dispatch:
 
 jobs:
