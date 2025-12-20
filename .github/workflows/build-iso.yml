@@ -40,6 +40,7 @@ jobs:
           iso-dest: fizzyblue.iso
           
       - name: Rename and Checksum ISO
+        id: rename
         run: |
           mkdir -p output
           mv ${{ steps.build.outputs.iso-dest }} output/fizzyblue.iso
