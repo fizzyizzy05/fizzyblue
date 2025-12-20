@@ -49,6 +49,6 @@ jobs:
       - name: Upload ISO to Job Artifacts
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
-          name:  ${{ steps.rename.outputs.output_format }}
+          name:  fizzyblue.iso
           if-no-files-found: error
           path:  output/
