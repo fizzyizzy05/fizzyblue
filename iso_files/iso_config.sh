@@ -26,15 +26,9 @@ SPECS=(
     "libblockdev-dm"
     "anaconda-live"
     "firefox"
+    "anaconda-webui"
 )
-if [[ "$IMAGE_TAG" =~ lts ]]; then
-    dnf config-manager --set-enabled centos-release-kmods-kernel
-    dnf copr enable -y jreilly/anaconda-webui
 
-    SPECS+=("anaconda-webui")
-elif [[ "$(rpm -E %fedora)" -ge 42 ]]; then
-    SPECS+=("anaconda-webui")
-fi
 dnf install -y "${SPECS[@]}"
 
 dnf config-manager --set-disabled centos-hyperscale &>/dev/null || true
@@ -80,7 +74,7 @@ EOF
 
 # Interactive Kickstart
 tee -a /usr/share/anaconda/interactive-defaults.ks <<EOF
-ostreecontainer --url=$IMAGE_REF:$IMAGE_TAG --transport=containers-storage --no-signature-verification
+ostreecontainer --url=ghcr.io/fizzyizzy05/fizzyblue:latest --transport=containers-storage --no-signature-verification
 %include /usr/share/anaconda/post-scripts/install-configure-upgrade.ks
 %include /usr/share/anaconda/post-scripts/disable-fedora-flatpak.ks
 %include /usr/share/anaconda/post-scripts/install-flatpaks.ks
@@ -89,7 +83,7 @@ EOF
 # Signed Images
 tee /usr/share/anaconda/post-scripts/install-configure-upgrade.ks <<EOF
 %post --erroronfail
-bootc switch --mutate-in-place --enforce-container-sigpolicy --transport registry fizzyblue:latest
+bootc switch --mutate-in-place --enforce-container-sigpolicy --transport registry ghcr.io/fizzyizzy05/fizzyblue:latest
 %end
 EOF
 
