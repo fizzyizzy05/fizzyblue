@@ -48,11 +48,11 @@ jobs:
         with:
           name: fizzyblue.iso
           if-no-files-found: error
-          path: ${{ steps.rename.outputs.output_directory }}/fizzyblue.iso
+          path: fizzyblue.iso
           
       - name: Upload Checksum to Job Artifacts
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: fizzyblue.iso-CHECKSUM
           if-no-files-found: error
-          path: ${{ steps.rename.outputs.output_directory }}/fizzyblue.iso-CHECKSUM
+          path: fizzyblue.iso-CHECKSUM
