@@ -89,7 +89,7 @@ EOF
 # Signed Images
 tee /usr/share/anaconda/post-scripts/install-configure-upgrade.ks <<EOF
 %post --erroronfail
-bootc switch --mutate-in-place --enforce-container-sigpolicy --transport registry $IMAGE_REF:$IMAGE_TAG
+bootc switch --mutate-in-place --enforce-container-sigpolicy --transport registry fizzyblue:latest
 %end
 EOF
 
