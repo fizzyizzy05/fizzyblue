@@ -12,6 +12,7 @@ on:
     paths-ignore:
       - '**/README.md'
       - '.github/workflows/build-iso.yml'
+      - 'iso_files/**'
   workflow_dispatch:
 
 env:
