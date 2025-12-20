@@ -31,7 +31,7 @@ jobs:
         uses: ublue-os/titanoboa@main
         with:
           # Use the Silverblue image on the Live ISO to avoid SELinux errors. We can make things closer to fizzyblue with the iso_config file
-          image-ref: quay.io/fedora-atomic-desktops/silverblue-main:latest
+          image-ref: quay.io/fedora-atomic-desktops/silverblue:latest
           container-image: ghcr.io/fizzyizzy05/fizzyblue:latest
           flatpaks-list: ${{ github.workspace }}/flatpaks/system-flatpaks.list
           hook-post-rootfs: ${{ github.workspace }}/iso_files/iso_config.sh
