@@ -38,21 +38,16 @@ jobs:
           kargs: ""
           builder-distro: fedora
           iso-dest: fizzyblue.iso
-
-      - name: Checksum ISO
+          
+      - name: Rename and Checksum ISO
         run: |
-          sha256sum fizzyblue.iso | tee fizzyblue.iso-CHECKSUM
+          mkdir -p output
+          mv ${{ steps.build.outputs.iso-dest }} output/fizzyblue.iso
+          (cd output && sha256sum fizzyblue.iso | tee fizzyblue.iso-CHECKSUM)
           
       - name: Upload ISO to Job Artifacts
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
-          name: fizzyblue.iso
+          name:  ${{ steps.rename.outputs.output_format }}
           if-no-files-found: error
-          path: fizzyblue.iso
-          
-      - name: Upload Checksum to Job Artifacts
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
-        with:
-          name: fizzyblue.iso-CHECKSUM
-          if-no-files-found: error
-          path: fizzyblue.iso-CHECKSUM
+          path:  ${{ steps.rename.outputs.output_directory }}
