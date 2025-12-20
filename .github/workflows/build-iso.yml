@@ -51,4 +51,4 @@ jobs:
         with:
           name:  ${{ steps.rename.outputs.output_format }}
           if-no-files-found: error
-          path:  ${{ steps.rename.outputs.output_directory }}
+          path:  output/
