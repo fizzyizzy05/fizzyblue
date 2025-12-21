@@ -90,8 +90,7 @@ EOF
 # Signed Images
 tee /usr/share/anaconda/post-scripts/install-configure-upgrade.ks <<EOF
 %post --erroronfail
-bootc switch --mutate-in-place --enforce-container-sigpolicy --transport registry ghcr.io/fizzyizzy05/fizzyblue:latest
-%end
+sed -i 's/container-image-reference=.*/container-image-reference=ostree-image-signed:docker:\/\/ghcr.io\/fizzyizzy05\/fizzyblue:latest/' /ostree/deploy/default/deploy/*.origin%end
 EOF
 
 # Disable Fedora Flatpak
