@@ -12,3 +12,10 @@ dnf remove -y \
 # Setup the rechunker-group-fix for people coming from images using the old HHD rechunker
 chmod +x /usr/bin/rechunker-group-fix
 systemctl enable rechunker-group-fix.service
+
+# Build GNOME overrides
+mkdir -p /tmp/bazzite-schema-test &&
+find "/usr/share/glib-2.0/schemas/" -type f ! -name "*.gschema.override" -exec cp {} "/tmp/bazzite-schema-test/" \; 
+cp "/usr/share/glib-2.0/schemas/zz0-"*".gschema.override" "/tmp/bazzite-schema-test/" 
+glib-compile-schemas --strict /tmp/bazzite-schema-test 
+glib-compile-schemas /usr/share/glib-2.0/schemas &>/dev/null 
