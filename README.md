@@ -18,6 +18,7 @@ fizzyblue is a custom image for my own devices, as well as something I can comfo
 - Docker and Podman are both available in the image.
 - Steam and Lutris preinstalled for easy access to games, without dealing with Flatpak limitations.
 - Additional gaming tools included, such as gamescope, MangoHUD, ProtonPlus and more.
+- Fix for the legacy rechunker used by uBlue images for seamless rebasing.
 
 ## How to use
 ### Rebasing
