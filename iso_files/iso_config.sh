@@ -18,6 +18,13 @@ dnf remove -y \
     virt-manager \
     code
 
+# Disable unused systemd services
+systemctl disable brew-setup.service
+systemctl disable brew-upgrade.timer
+systemctl disable brew-update.timer
+systemctl disable rpm-ostree-automatic.timer
+systemctl disable flatpak-system-update.timer
+
 # Anaconda configuration (copied from Bluefin, massive thanks to them!)
 # Install Anaconda, Webui if >= F42
 SPECS=(
