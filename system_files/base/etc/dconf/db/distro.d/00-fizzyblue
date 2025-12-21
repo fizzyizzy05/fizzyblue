@@ -1,0 +1,14 @@
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>Return'
+command='ptyxis --new-window'
+name='Ptyxis'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Control><Alt>t'
+command='ptyxis --new-window'
+name='Ptyxis'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Shift><Control>Escape'
+command='flatpak run net.nokyan.Resources'
+name='Resources'

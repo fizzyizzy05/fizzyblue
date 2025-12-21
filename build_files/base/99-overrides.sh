@@ -19,3 +19,5 @@ find "/usr/share/glib-2.0/schemas/" -type f ! -name "*.gschema.override" -exec c
 cp "/usr/share/glib-2.0/schemas/zz0-"*".gschema.override" "/tmp/bazzite-schema-test/" 
 glib-compile-schemas --strict /tmp/bazzite-schema-test 
 glib-compile-schemas /usr/share/glib-2.0/schemas &>/dev/null 
+
+dconf update
