@@ -11,6 +11,7 @@ on:
       - main
     paths-ignore:
       - '**/README.md'
+      - '**/screenshot.png'
       - '.github/workflows/build-iso.yml'
       - 'iso_files/'
   workflow_dispatch:
