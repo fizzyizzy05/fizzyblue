@@ -2,6 +2,9 @@
 FROM scratch AS ctx
 COPY build_files /build_files
 
+# Add a way for system files to be added into the final build
+COPY system_files /system_files
+
 # Base Image
 FROM ghcr.io/ublue-os/silverblue-main:latest
 
