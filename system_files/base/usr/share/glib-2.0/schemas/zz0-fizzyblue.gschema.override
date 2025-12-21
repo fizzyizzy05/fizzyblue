@@ -4,5 +4,8 @@
 accent-color='purple'
 color-scheme='prefer-dark'
 
+[org.gnome.shell]
+favorite-apps=['org.mozilla.firefox.desktop', 'org.gnome.Calendar.desktop', 'dev.vencord.Vesktop.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'steam.desktop', 'code.desktop', 'io.github.kolunmi.Bazaar.desktop']
+
 [org.gnome.settings-daemon.plugins.media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
