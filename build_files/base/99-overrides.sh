@@ -2,6 +2,9 @@
 
 set -ouex pipefail
 
+# Remove firefox so we can use the flatpak
+dnf rm -y firefox
+
 # Remove preinstalled GNOME apps that end up being replaced
 dnf remove -y \
     gnome-software \
