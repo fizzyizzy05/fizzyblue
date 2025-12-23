@@ -9,6 +9,16 @@ dnf remove -y \
     gnome-system-monitor \
     yelp
 
+# Remove the GNOME Classic session and its related extensions
+dnf remove -y \
+    gnome-shell-extension-common \
+    gnome-shell-extension-apps-menu- \
+    gnome-shell-extension-launch-new-instance \
+    gnome-shell-extension-places-menu \
+    gnome-shell-extension-window-list \
+    gnome-shell-extension-background-logo \
+    gnome-shell-extension-appindicator
+
 # Setup the rechunker-group-fix for people coming from images using the old HHD rechunker
 chmod +x /usr/bin/rechunker-group-fix
 systemctl enable rechunker-group-fix.service
