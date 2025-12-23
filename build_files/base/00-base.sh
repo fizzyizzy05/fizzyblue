@@ -15,3 +15,8 @@ dnf rm -y firefox
 dnf in -y \
     fish \
     micro  
+
+# Install starship
+dnf copr enable -y atim/starship
+dnf in -y starship
+dnf copr disable -y atim/starship
