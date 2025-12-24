@@ -29,7 +29,7 @@ sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue
 I recommend coming from a GNOME image, such as Bluefin or Bazzite GNOME. Plasma installs should be fine, but you should install and activate [Mending Wall](https://flathub.org/en/apps/org.indii.mendingwall) before rebasing to minimize conflict between GNOME and KDE settings.
 Note that fizzyblue does not have a custom os-release file at this time, and will identify itself as standard Silverblue. This is normal and expected behaviour. 
 ### Clean installs
-Alternatively, ISOs are built on the 1st of the month and are [available for download from GitHub Actions](https://github.com/fizzyizzy05/fizzyblue/actions/workflows/build-iso.yml) for clean installs. Select the latest workflow and download the fizzyblue.iso.zip artifact.
+Alternatively, ISOs are built on the 1st of the month, or sooner if major changes are made to justify it, and are [available for download from GitHub Actions](https://github.com/fizzyizzy05/fizzyblue/actions/workflows/build-iso.yml) for clean installs. Select the latest workflow and download the fizzyblue.iso.zip artifact.
 
 ## Credits
 fizzyblue is made possible thanks to the work of:
