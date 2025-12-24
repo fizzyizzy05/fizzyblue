@@ -9,6 +9,7 @@ on:
   push:
     paths:
       - 'iso_files/**'
+      - 'flatpaks/**'
   workflow_dispatch:
 
 jobs:
