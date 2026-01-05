@@ -1,0 +1,114 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: fizzyblue
+# description will be included in the image's metadata
+description: Opinionated custom image based on Silverblue designed for Gaming and Software Development
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/blue-build/base-images/fedora-silverblue-nvidia
+image-version: 43 
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: base
+        destination: / # copies files/base/* to the root of the container
+
+  - type: dnf
+    install:
+      packages:
+        - micro
+        - fish
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - type: dnf
+    repos:
+      copr:
+        - atim/starship
+    install:
+      packages:
+        - starship
+
+  # Gaming Software
+  - type: dnf
+    repos:
+      files:
+        - https://negativo17.org/repos/fedora-multimedia.repo
+    install:
+      packages:
+        - steam
+        - lutris
+        - mangohud
+        - gamescope
+
+  # Development Software
+  - type: dnf
+    install:
+      packages:
+        - docker
+        - python3-tkinter
+        - python3-pip
+        - flatpak-builder
+        - libvirt
+        - libvirt-nss
+        - virt-manager
+        - foundry
+        - gnome-builder
+
+  # Install Visual Studio Code
+  - type: dnf
+    repos:
+      files:
+        - https://packages.microsoft.com/yumrepos/vscode/config.repo
+    install: 
+      packages:
+        - code
+
+  # Remove GNOME Classic & it's related extensions
+  - type: dnf
+    remove:
+      packages:
+        - gnome-classic-session
+        - gnome-shell-extension-common
+        - gnome-shell-extension-apps-menu-
+        - gnome-shell-extension-launch-new-instance
+        - gnome-shell-extension-places-menu
+        - gnome-shell-extension-window-list
+        - gnome-shell-extension-background-logo
+        - gnome-shell-extension-appindicator
+
+  # Remove other GNOME apps that are replaced with Flatpaks
+  - type: dnf
+    remove:
+      packages:
+        - gnome-software
+        - gnome-tour
+        - gnome-system-monitor
+        - yelp
+
+  # Setup the rechunker-group-fix for people coming from images using the old HHD rechunker
+  - type: script
+    scripts: 
+      - rechunker-fix.sh
+
+  # Override default GNOME settings
+  - type: gschema-overrides
+    include:
+    - zz0-fizzyblue.gschema.override
+
+  # Enable services
+  - type: systemd
+    system:
+      enabled:
+        - rechunker-group-fix.service
+        - docker.service
+    user:
+      enabled:
+        - flatpak-update.timer
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully

@@ -1,0 +1,9 @@
+[Unit]
+Description="Update Flatpaks"
+
+[Timer]
+OnUnitActiveSec=8h
+Unit=flatpak-system-update.service
+
+[Install]
+WantedBy=multi-user.target
