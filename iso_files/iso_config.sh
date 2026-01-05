@@ -49,7 +49,7 @@ profile_id = fizzyblue
 
 [Profile Detection]
 # Match os-release values
-os_id = fedora
+os_id = fizzyblue
 
 [Network]
 default_on_boot = FIRST_WIRED_WITH_LINK
