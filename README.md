@@ -1,5 +1,5 @@
 # fizzyblue
-fizzyblue is a custom bootc image for desktops and laptops based on Fedora Silverblue. It uses the ublue-os/silverblue-main image as a base with additional software and changes included for a better developer and gaming experience, while retaining a closer to vanilla GNOME. The name "fizzyblue" is an amalgamation of my username + Silverblue.
+fizzyblue is a custom bootc image for desktops and laptops based on Fedora Silverblue. It uses the BlueBuild Silverblue base image as a base with additional software and changes included for a better developer and gaming experience, while retaining a closer to vanilla GNOME. The name "fizzyblue" is an amalgamation of my username + Silverblue.
 
 fizzyblue is a custom image for my own devices, as well as something I can comfortably recommend people close to me to use, but most people should use [Bazzite](https://bazzite.gg) or [Bluefin](https://projectbluefin.io), as they have much larger maintainance teams and communities. That said, if the changes sound appealing to you, please feel free to try it out, but expect limited support compared to a more popular option.
 
@@ -33,7 +33,8 @@ Alternatively, ISOs are built on the 1st of the month, or sooner if major change
 
 ## Credits
 fizzyblue is made possible thanks to the work of:
-- **Universal Blue**: for providing an image template and base image to build off, Titanoboa for making ISOs, and general inspiration and other parts.
+- **BlueBuild**: for creating the base images and easy tooling to work with.
+- **Universal Blue**: Titanoboa for making ISOs, and general inspiration and other parts.
 - **Fedora Silverblue**: the ultimate base upon which fizzyblue is built off for packages and software.
 - **GNOME**: for providing a great desktop environment to include in fizzyblue.
 - And many other projects and individuals!
