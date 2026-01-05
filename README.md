@@ -18,13 +18,14 @@ fizzyblue is a custom image for my own devices, as well as something I can comfo
 - Docker and Podman are both available in the image.
 - Steam and Lutris preinstalled for easy access to games, without dealing with Flatpak limitations.
 - Additional gaming tools included, such as gamescope, MangoHUD, ProtonPlus and more.
+- Support for Nvidia GPUs with the `fizzyblue-nvidia` image. 
 - Fix for the legacy rechunker used by uBlue images for seamless rebasing.
 
 ## How to use
 ### Rebasing
 Run this command on an installed bootc system and reboot to use fizzyblue:
 ```bash
-sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue # or fizzyblue-nvidia for Nvidia users
 ```
 I recommend coming from a GNOME image, such as Bluefin or Bazzite GNOME. Plasma installs should be fine, but you should install and activate [Mending Wall](https://flathub.org/en/apps/org.indii.mendingwall) before rebasing to minimize conflict between GNOME and KDE settings.
 Note that fizzyblue does not have a custom os-release file at this time, and will identify itself as standard Silverblue. This is normal and expected behaviour. 
