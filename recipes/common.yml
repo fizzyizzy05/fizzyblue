@@ -1,12 +1,5 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: fizzyblue
-# description will be included in the image's metadata
-description: Opinionated custom image based on Silverblue designed for Gaming and Software Development
-
-# the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/blue-build/base-images/fedora-silverblue-nvidia
-image-version: 43 
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
