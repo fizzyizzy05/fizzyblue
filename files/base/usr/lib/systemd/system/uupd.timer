@@ -1,9 +1,10 @@
 [Unit]
-Description="Update Flatpaks"
+Description="Run uupd"
 
 [Timer]
+OnBootSec=5min
 OnUnitActiveSec=8h
-Unit=flatpak-update.service
+Unit=uupd.service
 
 [Install]
 WantedBy=timers.target

@@ -33,6 +33,15 @@ modules:
       packages:
         - starship
 
+  # Install uupd for updates
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/packages
+    install:
+      packages:
+        - uupd
+
   # Gaming Software
   - type: dnf
     repos:
@@ -106,9 +115,9 @@ modules:
       enabled:
         - rechunker-group-fix.service
         - docker.service
-    user:
-      enabled:
-        - flatpak-update.timer
+        - uupd.timer
+      disabled:
+        - bootc-fetch-apply-updates.timer
 
   # Install homebrew
   - type: brew

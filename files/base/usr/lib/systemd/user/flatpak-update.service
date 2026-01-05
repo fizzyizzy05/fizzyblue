@@ -1,6 +1,0 @@
-[Unit]
-Description="Update Flatpaks"
-
-[Service]
-ExecStart=/usr/bin/flatpak update
-ExecStart=/usr/bin/flatpak --user update
