@@ -11,6 +11,7 @@ fizzyblue is a custom image for my own devices, as well as something I can comfo
     - Firefox (as a flatpak) instead of GNOME Web
     - Bazaar instead of GNOME Software
     - Resources instead of GNOME System Monitor
+- [uupd](https://github.com/ublue-os/uupd) pre-installed for automatic and universal updates
 - Built on the latest release of Fedora.
 - Flatpaks are provided through Flathub. Fedora Flatpaks are specifically not included out of the box, due to their poor usability.
 - Homebrew pre-installed and automatically updating.
