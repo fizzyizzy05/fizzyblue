@@ -1,32 +1,35 @@
 # fizzyblue
-fizzyblue is a custom bootc image for desktops and laptops based on Fedora Silverblue. It uses the BlueBuild Silverblue base image as a base with additional software and changes included for a better developer and gaming experience, while retaining a closer to vanilla GNOME. The name "fizzyblue" is an amalgamation of my username + Silverblue.
+fizzyblue is a custom bootc image for desktops and laptops based on Fedora Silverblue, designed to offer a better developer and gaming experience, while retaining a near-vanilla GNOME setup. The name "fizzyblue" is an amalgamation of my username + Silverblue. 
 
-fizzyblue is a custom image for my own devices, as well as something I can comfortably recommend people close to me to use, but most people should use [Bazzite](https://bazzite.gg) or [Bluefin](https://projectbluefin.io), as they have much larger maintainance teams and communities. That said, if the changes sound appealing to you, please feel free to try it out, but expect limited support compared to a more popular option.
+fizzyblue is a personal project, expect limited support and more frequent changes compared to a more popular image such as [Bazzite](https://bazzite.gg) or [Bluefin](https://projectbluefin.io), which also have much larger maintainance teams and communities.
 
 ## Screenshot
 ![A screenshot of a booted fizzyblue system. It is a GNOME desktop with the overview open, showing Firefox, GNOME Calendar, Vesktop, Firefox, Terminal, Steam, Visual Studio Code and Bazaar on the bottom Dash](screenshot.png)
 
 ## Features
-- Near-vanilla GNOME experience; minor changes to the default appearance, shortcuts and a few default app substitutions.
+- Built on the latest stable release of Fedora, currently **43**. Major upgrades should happen within the release week.
+- Near-vanilla GNOME experience; minor changes to the default appearance, shortcuts and a few default app substitutions:
     - Firefox (as a flatpak) instead of GNOME Web
     - Bazaar instead of GNOME Software
     - Resources instead of GNOME System Monitor
-- [uupd](https://github.com/ublue-os/uupd) pre-installed for automatic and universal updates
-- Built on the latest release of Fedora.
-- Flatpaks are provided through Flathub. Fedora Flatpaks are specifically not included out of the box, due to their poor usability.
-- Homebrew pre-installed and automatically updating.
-- Visual Studio Code pre-installed. fish and starship included for a better CLI.
-- Docker and Podman are both available in the image.
-- Steam and Lutris preinstalled for easy access to games, without dealing with Flatpak limitations.
-- Additional gaming tools included, such as gamescope, MangoHUD, ProtonPlus and more.
-- Support for Nvidia GPUs with the `fizzyblue-nvidia` image. 
-- Fix for the legacy rechunker used by uBlue images for seamless rebasing.
+- [uupd](https://github.com/ublue-os/uupd) included and enabled by default for automatic and universal updates.
+- Flatpaks are provided through Flathub. Fedora Flatpaks are specifically not included out of the box, due to overall being poor quality.
+- Homebrew, fish and starship included for a better CLI.
+- Visual Studio Code, virt-manager and [foundry](https://gitlab.gnome.org/foundry) included for software development. 
+- Docker and Podman are both included to support a variety of workflows.
+- Steam and Lutris included for easy access to games, without dealing with Flatpak limitations.
+- Additional gaming tools pre-installed such as gamescope, MangoHUD, ProtonPlus and more.
+- Support for Turing and newer Nvidia cards with the `fizzyblue-nvidia` image. 
+- Fix for the legacy rechunker used by uBlue images for seamless and reliable rebasing.
 
 ## How to use
 ### Rebasing
-Run this command on an installed bootc system and reboot to use fizzyblue:
+Run one of the following commands on an installed bootc system (based on the GPU) and reboot to use fizzyblue:
 ```bash
-sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue # or fizzyblue-nvidia for Nvidia users
+# AMD/Intel GPUs
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue
+# Turing (GTX 16xx/RTX 20xx) or newer Nvidia GPUs
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue-nvidia
 ```
 I recommend coming from a GNOME image, such as Bluefin or Bazzite GNOME. Plasma installs should be fine, but you should install and activate [Mending Wall](https://flathub.org/en/apps/org.indii.mendingwall) before rebasing to minimize conflict between GNOME and KDE settings.
 ### Clean installs
