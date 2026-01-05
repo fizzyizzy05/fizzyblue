@@ -4,26 +4,11 @@ set -ouex pipefail
 
 dnf autoremove -y
 
-# Remove a bunch of crap that isn't needed on the live iso
-dnf remove -y \
-    steam \
-    lutris \
-    mangohud \
-    docker \
-    python3-tkinter \
-    python3-pip \
-    flatpak-builder \
-    libvirt \
-    libvirt-nss \
-    virt-manager \
-    code
-
 # Disable unused systemd services
 systemctl disable brew-setup.service
 systemctl disable brew-upgrade.timer
 systemctl disable brew-update.timer
 systemctl disable rpm-ostree-automatic.timer
-systemctl disable flatpak-system-update.timer
 
 # Anaconda configuration (copied from Bluefin, massive thanks to them!)
 # Install Anaconda, Webui if >= F42
