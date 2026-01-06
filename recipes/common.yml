@@ -77,6 +77,12 @@ modules:
       packages:
         - code
 
+  # Install Flatpak 1.16.1 to work around https://gitlab.gnome.org/GNOME/gnome-builder/-/issues/2387#note_2637545
+  # TODO: remove this once it's been fixed, fizzyblue should not carry this longer than needed.
+  - type: script
+    snippets:
+      - "dnf5 downgrade -y --allow-downgrade flatpak-1.16.1-1.fc43 flatpak-libs-1.16.1-1.fc43 flatpak-session-helper-1.16.1-1.fc43 flatpak-selinux-1.16.1-1.fc43"
+
   # Remove GNOME Classic & it's related extensions
   - type: dnf
     remove:
