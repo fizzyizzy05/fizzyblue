@@ -35,6 +35,8 @@ I recommend coming from a GNOME image, such as Bluefin or Bazzite GNOME. Plasma 
 ### Clean installs
 Alternatively, ISOs are built on the 1st of the month, or sooner if major changes are made to justify it, and are [available for download from GitHub Actions](https://github.com/fizzyizzy05/fizzyblue/actions/workflows/build-iso.yml) for clean installs. Select the latest workflow and download the fizzyblue.iso.zip artifact.
 
+These ISOs are currently built on the `fizzyblue` image; Nvidia users should rebase post-install using the above command.
+
 ## Credits
 fizzyblue is made possible thanks to the work of:
 - **BlueBuild**: for creating the base images and easy tooling to work with.
