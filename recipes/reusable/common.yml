@@ -60,7 +60,6 @@ modules:
         - libvirt-nss
         - virt-manager
         - foundry
-        - gnome-builder
 
   # Install Visual Studio Code
   - type: dnf
