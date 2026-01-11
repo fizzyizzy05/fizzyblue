@@ -76,37 +76,10 @@ modules:
     snippets:
       - "dnf5 downgrade -y --allow-downgrade flatpak-1.16.1-1.fc43 flatpak-libs-1.16.1-1.fc43 flatpak-session-helper-1.16.1-1.fc43 flatpak-selinux-1.16.1-1.fc43"
 
-  # Remove GNOME Classic & it's related extensions
-  - type: dnf
-    remove:
-      packages:
-        - gnome-classic-session
-        - gnome-shell-extension-common
-        - gnome-shell-extension-apps-menu-
-        - gnome-shell-extension-launch-new-instance
-        - gnome-shell-extension-places-menu
-        - gnome-shell-extension-window-list
-        - gnome-shell-extension-background-logo
-        - gnome-shell-extension-appindicator
-
-  # Remove other GNOME apps that are replaced with Flatpaks
-  - type: dnf
-    remove:
-      packages:
-        - gnome-software
-        - gnome-tour
-        - gnome-system-monitor
-        - yelp
-
   # Setup the rechunker-group-fix for people coming from images using the old HHD rechunker
   - type: script
     scripts: 
       - rechunker-fix.sh
-
-  # Override default GNOME settings
-  - type: gschema-overrides
-    include:
-    - zz0-fizzyblue.gschema.override
 
   # Enable services
   - type: systemd
