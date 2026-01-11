@@ -1,0 +1,13 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+
+# Things that need to be on every silverblue edition of fizzyblue
+
+modules:
+  - type: os-release
+    properties:
+      ID: fedora
+      NAME: fizzyblue
+      PRETTY_NAME: fizzyblue (FROM Fedora Silverblue)
+
+  - from-file: reusable/common.yml

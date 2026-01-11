@@ -9,4 +9,4 @@ base-image: ghcr.io/blue-build/base-images/fedora-silverblue-nvidia
 image-version: 43 
 
 modules:
-    - from-file: common.yml
+    - from-file: reusable/silverblue.yml
