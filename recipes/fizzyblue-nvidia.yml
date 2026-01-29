@@ -5,7 +5,7 @@ name: fizzyblue-nvidia
 description: Opinionated custom image based on Silverblue designed for Gaming and Software Development, with Nvidia drivers
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/blue-build/base-images/fedora-silverblue-nvidia
+base-image: ghcr.io/blue-build/base-images/fedora-silverblue-nvidia-open
 image-version: 43 
 
 modules:
