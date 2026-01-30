@@ -11,9 +11,6 @@ fizzyblue is a personal project, expect limited support and more frequent change
 - Near-vanilla GNOME experience; minor changes to the default appearance, shortcuts and a few default app substitutions:
     - Bazaar instead of GNOME Software
     - Resources instead of GNOME System Monitor
-- Not a fan of GNOME? Plasma is available too. 
-    - Ptyxis provided alongside Konsole for better container functionality. 
-    - Bazaar is used in favour of Discover until a Qt alternative is available with the same speed and usability as Bazaar.
 - RPM Firefox removed in favour of the Flatpak
 - [uupd](https://github.com/ublue-os/uupd) included and enabled by default for automatic and universal updates.
 - Flatpaks are provided through Flathub. Fedora Flatpaks are specifically not included out of the box, due to overall being poor quality.
@@ -35,14 +32,7 @@ sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue
 # Turing (GTX 16xx/RTX 20xx) or newer Nvidia GPUs
 sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue-nvidia
 ```
-#### fizzyblue-kinoite (KDE Plasma)
-```bash
-# AMD/Intel GPUs
-sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue-kinoite
-# Turing (GTX 16xx/RTX 20xx) or newer Nvidia GPUs
-sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue-kinoite-nvidia
-```
-It's recommended to stick to the desktop environment you have currently installed on your system, e.g. **fizzyblue** for Bluefin, Bazzite GNOME, or Silverblue; or **fizzyblue-kinoite** for Aurora, Bazzite KDE and Kinoite.
+It's recommended to stick to the desktop environment you have currently installed on your system, e.g. **fizzyblue** for Bluefin, Bazzite GNOME, or Silverblue.
 ### Clean installs
 Alternatively, ISOs are built on the 1st of the month, or sooner if major changes are made to justify it, and are [available for download from GitHub Actions](https://github.com/fizzyizzy05/fizzyblue/actions/workflows/build-iso.yml) for clean installs. Select the latest workflow and download the fizzyblue.iso.zip artifact.
 
@@ -53,5 +43,5 @@ fizzyblue is made possible thanks to the work of:
 - **BlueBuild**: for creating the base images and easy tooling to work with.
 - **Universal Blue**: Titanoboa for making ISOs, and general inspiration and other parts.
 - **Fedora Atomic**: the ultimate base upon which fizzyblue is built off for packages and software.
-- **GNOME and KDE**: for providing two great desktop environments that are used in fizzyblue.
+- **GNOME**: for providing a great desktop environment that is used in fizzyblue.
 - And many other projects and individuals!
