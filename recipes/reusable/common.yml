@@ -70,6 +70,15 @@ modules:
       packages:
         - code
 
+  - type: os-release
+    properties:
+      ID: fizzyblue
+      ID_LIKE: fedora
+      NAME: fizzyblue
+      PRETTY_NAME: fizzyblue
+      VERSION_CODENAME: amethyst
+      DEFAULT_HOSTNAME: fizzyblue
+
   # Setup the rechunker-group-fix for people coming from images using the old HHD rechunker
   - type: script
     scripts: 
