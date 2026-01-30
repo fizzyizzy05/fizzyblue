@@ -10,3 +10,5 @@ image-version: 43
 
 modules:
     - from-file: reusable/silverblue.yml
+
+    - type: signing # this sets up the proper policy & signing files for signed images to work fully
