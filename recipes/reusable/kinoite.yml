@@ -9,3 +9,8 @@ modules:
     remove:
       packages:
         - plasma-discover
+
+  - type: dnf
+    install:
+      packages:
+        - ptyxis
