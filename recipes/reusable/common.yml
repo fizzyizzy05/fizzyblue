@@ -1,6 +1,8 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
+# things that need to be on every fizzyblue, regardless of desktop
+
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
