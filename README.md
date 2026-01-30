@@ -32,6 +32,13 @@ sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue
 # Turing (GTX 16xx/RTX 20xx) or newer Nvidia GPUs
 sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue-nvidia
 ```
+#### fizzyblue-kinoite (KDE Plasma)
+```bash
+# AMD/Intel GPUs
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue-kinoite
+# Turing (GTX 16xx/RTX 20xx) or newer Nvidia GPUs
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue-kinoite-nvidia
+```
 It's recommended to stick to the desktop environment you have currently installed on your system, e.g. **fizzyblue** for Bluefin, Bazzite GNOME, or Silverblue; or **fizzyblue-kinoite** for Aurora, Bazzite KDE and Kinoite.
 ### Clean installs
 Alternatively, ISOs are built on the 1st of the month, or sooner if major changes are made to justify it, and are [available for download from GitHub Actions](https://github.com/fizzyizzy05/fizzyblue/actions/workflows/build-iso.yml) for clean installs. Select the latest workflow and download the fizzyblue.iso.zip artifact.
