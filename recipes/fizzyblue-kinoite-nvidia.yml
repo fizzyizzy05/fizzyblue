@@ -1,0 +1,14 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: fizzyblue-kinoite-nvidia-open
+# description will be included in the image's metadata
+description: Opinionated custom image based on Kinoite designed for Gaming and Software Development, with Nvidia drivers
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/blue-build/base-images/fedora-kinoite-nvidia-open
+image-version: 43 
+
+modules:
+    - from-file: reusable/kinoite.yml
+
+    - type: signing # this sets up the proper policy & signing files for signed images to work fully

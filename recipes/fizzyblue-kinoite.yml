@@ -1,0 +1,14 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: fizzyblue-kinoite
+# description will be included in the image's metadata
+description: Opinionated custom image based on Kinoite designed for Gaming and Software Development
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/blue-build/base-images/fedora-kinoite
+image-version: 43 
+
+modules:
+    - from-file: reusable/kinoite.yml
+
+    - type: signing # this sets up the proper policy & signing files for signed images to work fully

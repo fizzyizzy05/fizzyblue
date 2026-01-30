@@ -1,0 +1,11 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+
+# Things that need to be on every silverblue edition of fizzyblue
+
+modules:
+  # Remove other GNOME apps that are replaced with Flatpaks
+  - type: dnf
+    remove:
+      packages:
+        - plasma-discover

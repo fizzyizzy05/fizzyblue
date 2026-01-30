@@ -25,13 +25,14 @@ fizzyblue is a personal project, expect limited support and more frequent change
 ## How to use
 ### Rebasing
 Run one of the following commands on an installed bootc system (based on the GPU) and reboot to use fizzyblue:
+#### fizzyblue (GNOME)
 ```bash
 # AMD/Intel GPUs
 sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue
 # Turing (GTX 16xx/RTX 20xx) or newer Nvidia GPUs
 sudo bootc switch --enforce-container-sigpolicy ghcr.io/fizzyizzy05/fizzyblue-nvidia
 ```
-I recommend coming from a GNOME image, such as Bluefin or Bazzite GNOME. Plasma installs should be fine, but you should install and activate [Mending Wall](https://flathub.org/en/apps/org.indii.mendingwall) before rebasing to minimize conflict between GNOME and KDE settings.
+It's recommended to stick to the desktop environment you have currently installed on your system, e.g. **fizzyblue** for Bluefin, Bazzite GNOME, or Silverblue; or **fizzyblue-kinoite** for Aurora, Bazzite KDE and Kinoite.
 ### Clean installs
 Alternatively, ISOs are built on the 1st of the month, or sooner if major changes are made to justify it, and are [available for download from GitHub Actions](https://github.com/fizzyizzy05/fizzyblue/actions/workflows/build-iso.yml) for clean installs. Select the latest workflow and download the fizzyblue.iso.zip artifact.
 
