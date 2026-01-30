@@ -1,5 +1,5 @@
 # fizzyblue
-fizzyblue is a custom bootc image for desktops and laptops based on Fedora Silverblue, designed to offer a better developer and gaming experience, while retaining a cleaner desktop setup.
+fizzyblue is a custom bootc image for desktops and laptops based on Fedora atomic, designed to offer a better developer and gaming experience, while retaining a cleaner desktop setup.
 
 fizzyblue is a personal project, expect limited support and more frequent changes compared to a more popular image such as [Bazzite](https://bazzite.gg) or [Bluefin](https://projectbluefin.io), which also have much larger maintainance teams and communities.
 
@@ -9,9 +9,12 @@ fizzyblue is a personal project, expect limited support and more frequent change
 ## Features
 - Built on the latest stable release of Fedora, currently **43**. Major upgrades should happen within the release week.
 - Near-vanilla GNOME experience; minor changes to the default appearance, shortcuts and a few default app substitutions:
-    - Firefox (as a flatpak) instead of GNOME Web
     - Bazaar instead of GNOME Software
     - Resources instead of GNOME System Monitor
+- Not a fan of GNOME? Plasma is available too. 
+    - Ptyxis provided alongside Konsole for better container functionality. 
+    - Bazaar is used in favour of Discover until a Qt alternative is available with the same speed and usability as Bazaar.
+- RPM Firefox removed in favour of the Flatpak
 - [uupd](https://github.com/ublue-os/uupd) included and enabled by default for automatic and universal updates.
 - Flatpaks are provided through Flathub. Fedora Flatpaks are specifically not included out of the box, due to overall being poor quality.
 - Homebrew, fish and starship included for a better CLI.
@@ -49,6 +52,6 @@ These ISOs are currently built on the `fizzyblue` image; Nvidia users should reb
 fizzyblue is made possible thanks to the work of:
 - **BlueBuild**: for creating the base images and easy tooling to work with.
 - **Universal Blue**: Titanoboa for making ISOs, and general inspiration and other parts.
-- **Fedora Silverblue**: the ultimate base upon which fizzyblue is built off for packages and software.
-- **GNOME**: for providing a great desktop environment to include in fizzyblue.
+- **Fedora Atomic**: the ultimate base upon which fizzyblue is built off for packages and software.
+- **GNOME and KDE**: for providing two great desktop environments that are used in fizzyblue.
 - And many other projects and individuals!
