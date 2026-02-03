@@ -98,3 +98,4 @@ modules:
 
   # Install homebrew
   - type: brew
+    direct-pull: true
