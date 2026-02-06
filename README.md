@@ -1,7 +1,7 @@
 # fizzyblue
 fizzyblue is a custom bootc image for desktops and laptops based on Fedora atomic, designed to offer a better developer and gaming experience, while retaining a cleaner desktop setup.
 
-fizzyblue is a personal project, expect limited support and more frequent changes compared to a more popular image such as [Bazzite](https://bazzite.gg) or [Bluefin](https://projectbluefin.io), which also have much larger maintainance teams and communities.
+fizzyblue is a personal project, expect limited support compared to a more popular image such as [Bazzite](https://bazzite.gg) or [Bluefin](https://projectbluefin.io), which also have much larger maintainance teams and communities. fizzyblue is feature complete and in maintainance mode for the forseeable future.
 
 ## Screenshot
 ![A screenshot of a booted fizzyblue system. It is a GNOME desktop with the overview open, showing Firefox, GNOME Calendar, Vesktop, Firefox, Terminal, Steam, Visual Studio Code and Bazaar on the bottom Dash](screenshot.png)
