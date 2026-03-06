@@ -63,15 +63,6 @@ modules:
         - virt-manager
         - foundry
 
-  # Install Visual Studio Code
-  - type: dnf
-    repos:
-      files:
-        - https://packages.microsoft.com/yumrepos/vscode/config.repo
-    install: 
-      packages:
-        - code
-
   - type: os-release
     properties:
       ID: fizzyblue
@@ -99,3 +90,7 @@ modules:
   # Install homebrew
   - type: brew
     direct-pull: true
+
+  # Add the Justfiles
+  - type: just
+    validate: true
