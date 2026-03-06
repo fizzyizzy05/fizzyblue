@@ -92,5 +92,5 @@ modules:
     direct-pull: true
 
   # Add the Justfiles
-  - type: just
+  - type: justfiles
     validate: true
