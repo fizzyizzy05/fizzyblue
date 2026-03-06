@@ -15,8 +15,9 @@ fizzyblue is a personal project, expect limited support compared to a more popul
 - [uupd](https://github.com/ublue-os/uupd) included and enabled by default for automatic and universal updates.
 - Flatpaks are provided through Flathub. Fedora Flatpaks are specifically not included out of the box, due to overall being poor quality.
 - Homebrew, fish and starship included for a better CLI.
-- Visual Studio Code, virt-manager and [foundry](https://gitlab.gnome.org/foundry) included for software development. 
-- Docker and Podman are both included to support a variety of workflows.
+- virt-manager and [foundry](https://gitlab.gnome.org/foundry) included for software development. 
+- blujust commands for installing VS Code and JetBrains Toolbox
+- Docker and Podman are both included to support a variety of container-based workflows.
 - Steam and Lutris included for easy access to games, without dealing with Flatpak limitations.
 - Additional gaming tools pre-installed such as gamescope, MangoHUD, ProtonPlus and more.
 - Support for Turing and newer Nvidia cards with the `fizzyblue-nvidia` image. 
