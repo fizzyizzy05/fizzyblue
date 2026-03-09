@@ -94,3 +94,11 @@ modules:
   # Add the Justfiles
   - type: justfiles
     validate: true
+
+  # Downgrade rpm-ostree to an older working version
+  # See https://github.com/coreos/rpm-ostree/issues/5567
+  # Credit: Aurora
+  - type: script
+    snippets:
+      - "dnf -y install rpm-ostree-2025.12-1.fc$(rpm -E %fedora)"
+    
