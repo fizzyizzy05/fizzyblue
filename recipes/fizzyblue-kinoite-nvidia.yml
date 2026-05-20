@@ -6,7 +6,7 @@ description: Opinionated custom image based on Kinoite designed for Gaming and S
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/blue-build/base-images/fedora-kinoite-nvidia-open
-image-version: 43 
+image-version: 44
 
 modules:
     - from-file: reusable/kinoite.yml
