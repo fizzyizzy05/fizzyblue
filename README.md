@@ -7,7 +7,7 @@ fizzyblue is a personal project, expect limited support compared to a more popul
 ![A screenshot of a booted fizzyblue system. It is a GNOME desktop with the overview open, showing Firefox, GNOME Calendar, Vesktop, Firefox, Terminal, Steam, Visual Studio Code and Bazaar on the bottom Dash](screenshot.png)
 
 ## Features
-- Built on the latest stable release of Fedora, currently **43**. Major upgrades should happen within the release week.
+- Built on the latest stable release of Fedora, currently **44**. Major upgrades should happen within the release week.
 - Near-vanilla GNOME experience; minor changes to the default appearance, shortcuts and a few default app substitutions:
     - Bazaar instead of GNOME Software
     - Resources instead of GNOME System Monitor
