@@ -1,7 +1,10 @@
 # fizzyblue
+> [!INFO]
+> fizzyblue is in maintainance mode for the forseeable future, and likely to be discontinued around the release of Fedora 45. I largely don't really have the time or interest to work on this compared to other projects, and I've largely moved on to working on [Apollo](https://getapollo.dev), which is much closer to what I wanted to make out of fizzyblue. 
+
 fizzyblue is a custom bootc image for desktops and laptops based on Fedora atomic, designed to offer a better developer and gaming experience, while retaining a cleaner desktop setup.
 
-fizzyblue is a personal project, expect limited support compared to a more popular image such as [Bazzite](https://bazzite.gg) or [Bluefin](https://projectbluefin.io), which also have much larger maintainance teams and communities. fizzyblue is feature complete and in maintainance mode for the forseeable future.
+fizzyblue is a personal project, expect limited support compared to a more popular image such as [Bazzite](https://bazzite.gg) or [Bluefin](https://projectbluefin.io), which also have much larger maintainance teams and communities. 
 
 ## Screenshot
 ![A screenshot of a booted fizzyblue system. It is a GNOME desktop with the overview open, showing Firefox, GNOME Calendar, Vesktop, Firefox, Terminal, Steam, Visual Studio Code and Bazaar on the bottom Dash](screenshot.png)
