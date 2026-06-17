@@ -1,5 +1,5 @@
 # fizzyblue
-> [!INFO]
+> [!WARNING]
 > fizzyblue is in maintainance mode for the forseeable future, and likely to be discontinued around the release of Fedora 45. I largely don't really have the time or interest to work on this compared to other projects, and I've largely moved on to working on [Apollo](https://getapollo.dev), which is much closer to what I wanted to make out of fizzyblue. 
 
 fizzyblue is a custom bootc image for desktops and laptops based on Fedora atomic, designed to offer a better developer and gaming experience, while retaining a cleaner desktop setup.
